@@ -31,9 +31,9 @@ Things you may want to cover:
 |password|string|null:false|
 
 ### Association
-- has_many :groups, through :members
-- has many :messages
-- has meny :members
+- has_many :groups, through::members
+- has_many :messages
+- has_many :members
 
 
 ## messagesテーブル
@@ -46,8 +46,8 @@ Things you may want to cover:
 |user_id|integer|null :false, foreign_key: true|
 
 ### Association
-- belongs to :user
-- belongs to :group
+- belongs_to :user
+- belongs_to :group
 
 
 
@@ -70,8 +70,8 @@ Things you may want to cover:
 
 ### Association
 
-- has many : massages
-- has many : members
-- has many : users, through :member
+- has_many : massages
+- has_many : members
+- has_many : users, through::member
 
 
