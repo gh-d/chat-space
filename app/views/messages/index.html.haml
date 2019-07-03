@@ -1,30 +1,6 @@
 .flash-box
 .wrapper
-  .chat-side
-    .side-header
-      .side-header__box
-        .side-header__box__user-name
-          folgore
-        %ul.side-header__box__menu
-          %li.side-header__box__menu__new-group
-            %a{href: "/groups/new"}
-              %i.fa.fa-edit
-          %li.side-header__box__menu__edit-user
-            %a{href: "/users/961/edit"}
-              %i.fa.fa-cog
-
-    .groups
-      %a{href: ""}
-        .group
-          %p.group__group-name
-            group
-          %p.group__latest-massage
-            まだメッセージはありません
-        .group
-          %p.group__group-name
-            group
-          %p.group__latest-massage
-            まだメッセージはありません
+  =render 'shared/side-bar'
   .chat-main
     .main-header
       .main-header__left-box
@@ -34,7 +10,7 @@
           menber
           %li.main-header__left-box__menber-list__menber
             folgore
-  
+
       %a{href: "groups/1960/edit"}
         .main-header__edit-btn
           edit
