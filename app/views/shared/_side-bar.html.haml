@@ -5,14 +5,14 @@
         folgore
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          %a{href: "/groups/new"}
+          = link_to "#/groups/new" do
             %i.fa.fa-edit
         %li.side-header__box__menu__edit-user
-          %a{href: "/users/961/edit"}
+          = link_to "#/users/961/edit" do
             %i.fa.fa-cog
 
   .groups
-    %a{href: ""}
+    = link_to "#" do
       .group
         %p.group__group-name
           group

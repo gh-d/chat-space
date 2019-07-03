@@ -1,6 +1,6 @@
 .flash-box
 .wrapper
-  =render 'shared/side-bar'
+  = render 'shared/side-bar'
   .chat-main
     .main-header
       .main-header__left-box
@@ -10,8 +10,9 @@
           menber
           %li.main-header__left-box__menber-list__menber
             folgore
-
-      %a{href: "groups/1960/edit"}
+     
+      //%a{href: "#groups/1960/edit"}
+      = link_to "#groups/1960/edit" do
         .main-header__edit-btn
           edit
     .messages
@@ -29,7 +30,7 @@
     .form
       %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/1960/messages", enctype: "multipart/form-data", method: "post"}
         %input{name: "utf8", type: "hidden", value: "✓"}/
-        %input{name: "authenticity_token", type: "hidden", value: "wmbhg0RV9jgkMHmsSpGRM0OVNi4WFhthNJrpH1Et7c8YA5+FddodCq7XWr/u+p6QsvtHHfSYqGz+xFbhW4gldw=="}/
+        %input{name: "authenticity_token", type: "hidden"}/
         .input-box
           %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
           %label.input-box__image{for: "message_image"}
