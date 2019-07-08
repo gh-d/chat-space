@@ -8,4 +8,6 @@
 @import "modules/flash";
 @import "config/font-size";
 @import "modules/group";
-@import "messages/messages.scss"
+@import "messages/messages.scss";
+@import "mixins/mixins";
+@import "mixins/vendor_prefix";

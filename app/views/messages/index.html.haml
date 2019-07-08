@@ -1,19 +1,21 @@
 .flash-box
 .wrapper
   = render 'shared/side-bar'
-  .chat-main
-    .main-header
-      .main-header__left-box
-        %h2.main-header__left-box__current-group
+  .chat
+    .header
+      .left-header
+        .left-header__title
           currentgroup
-        %ul.main-header__left-box__menber-list
-          menber
-          %li.main-header__left-box__menber-list__menber
-            folgore
-     
-      = link_to "#groups/1960/edit" do
-        .main-header__edit-btn
-          edit
+        %ul.left-header__members
+          menber:
+          %li.member
+            testman
+      
+      .right-header
+        = link_to "#groups/1960/edit" do
+          .right-header__button
+            edit
+
     .messages
       .message{"data-message_id": "5463"}
         .message__upper-info
