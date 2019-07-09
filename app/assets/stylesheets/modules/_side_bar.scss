@@ -2,6 +2,9 @@
   box-sizing: border-box;
   color: white;
   width: 300px;
+  float: left;
+  height: 100%;
+  position: fixed;
   .header {
     background-color: #253141;
     height: 100px;

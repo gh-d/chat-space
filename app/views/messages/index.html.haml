@@ -1,35 +1,28 @@
 .flash-box
-.wrapper
-  = render 'shared/side-bar'
-  .chat
-    .header
-      .left-header
-        .left-header__title
-          currentgroup
-        %ul.left-header__members
-          menber:
-          %li.member
-            testman
-      
-      .right-header
-        = link_to "#groups/1960/edit" do
-          .right-header__button
-            edit
 
-    .messages
-      .message{"data-message_id": "5463"}
-        .message__upper-info
-          %p.message__upper-info__talker folgore
-          %p.message__upper-info__date 2019/07/02
-        %p.message__text メッセージ
-      .message{"data-message_id": "5463"}
-        = render @messages
-      
-    .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+= render 'shared/side-bar'
+.chat
+  .header
+    .left-header
+      .left-header__title
+        = @group.name
+      %ul.left-header__members
+        menber:
+        %li.member
+          testman
+    
+    .right-header
+      = link_to "#groups/1960/edit" do
+        .right-header__button
+          edit
+  .messages
+    = render @messages
+    
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
