@@ -1,5 +1,4 @@
 .flash-box
-
 = render 'shared/side-bar'
 .chat
   .header
@@ -25,4 +24,4 @@
         = f.label :image, class: 'form__mask__image' do
           = fa_icon 'picture-o', class: 'icon'
           = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+      = f.submit 'Send', class: 'form__submit','data-disable-with':false
