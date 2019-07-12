@@ -21,7 +21,6 @@ $(function(){
 
   var reloadMessages = function(){
     last_message_id = $(".message:last").data("id");
-    console.log(last_message_id)
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -30,9 +29,7 @@ $(function(){
     })
 
     .done(function(messages){
-      console.log(messages)
       messages.forEach(function(message){
-        console.log(message)
         if(message !== null){
           var html = buildHTML(message);
           $('.messages').append(html);
