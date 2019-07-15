@@ -1,23 +1,6 @@
 $(function(){
   function buildHTML(message){
     if (message.content && message.image.url) {
-    //   var image = (message.image.url)? `<image class="lower-message_image" src="${message.image.url}">`:"";
-    //   var html = `<div class="message" date-id='${message.id}'>
-    //               <div class="upper-message" >
-    //                 <div class="upper-message__user-name">
-    //                   ${message.user_name}
-    //                 </div>
-    //                 <div class="upper-message__date">
-    //                   ${message.created_at}
-    //               </div>
-    //             </div>
-    //               <div class="lower-message">
-    //                 <p class="lower-message__content"></p>
-    //                   ${message.content}
-    //                   ${image}
-    //               </div>`
-    // return html;
-    // };
   
       var html = `<div class="message" data-id= &{message.id}  > 
         <div class="upper-message">
