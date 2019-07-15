@@ -1,6 +1,24 @@
 $(function(){
   function buildHTML(message){
     if (message.content && message.image.url) {
+    //   var image = (message.image.url)? `<image class="lower-message_image" src="${message.image.url}">`:"";
+    //   var html = `<div class="message" date-id='${message.id}'>
+    //               <div class="upper-message" >
+    //                 <div class="upper-message__user-name">
+    //                   ${message.user_name}
+    //                 </div>
+    //                 <div class="upper-message__date">
+    //                   ${message.created_at}
+    //               </div>
+    //             </div>
+    //               <div class="lower-message">
+    //                 <p class="lower-message__content"></p>
+    //                   ${message.content}
+    //                   ${image}
+    //               </div>`
+    // return html;
+    // };
+  
       var html = `<div class="message" data-id= &{message.id}  > 
         <div class="upper-message">
           <div class="upper-message__user-name">
@@ -14,7 +32,7 @@ $(function(){
           <p class="lower-message__content">
             ${message.content}
           </p>
-          <img src=" message.image.url  " class="lower-message__image" >
+          <img src=" ${message.image.url}  " class="lower-message__image" >
         </div>
       </div>`
     } else if (message.content) {
@@ -50,7 +68,8 @@ $(function(){
       </div>`
     };
     return html;
-  };
+  }
+  
    
   
   $('#new_message').on('submit',function(e){
@@ -105,3 +124,4 @@ $(function(){
     setInterval(reloadMessages, 5000);
   };
 });
+
